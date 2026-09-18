@@ -18,6 +18,36 @@ if (dateInput) {
   dateInput.min = new Date().toISOString().split("T")[0];
 }
 
+const ambienceAudio = document.querySelector("#ambience-audio");
+const audioToggle = document.querySelector("#audio-toggle");
+const audioVolume = document.querySelector("#audio-volume");
+
+if (ambienceAudio && audioToggle && audioVolume) {
+  ambienceAudio.volume = Number(audioVolume.value);
+  audioToggle.addEventListener("click", async () => {
+    if (ambienceAudio.paused) {
+      try {
+        await ambienceAudio.play();
+        audioToggle.querySelector(".audio-icon").textContent = "Ⅱ";
+        audioToggle.querySelector(".audio-label").textContent = "Pausar música";
+        audioToggle.setAttribute("aria-label", "Pausar música de ambiente");
+        audioToggle.setAttribute("aria-pressed", "true");
+      } catch (error) {
+        console.error("No se pudo reproducir el audio:", error);
+      }
+    } else {
+      ambienceAudio.pause();
+      audioToggle.querySelector(".audio-icon").textContent = "▶";
+      audioToggle.querySelector(".audio-label").textContent = "Música de ambiente";
+      audioToggle.setAttribute("aria-label", "Reproducir música de ambiente");
+      audioToggle.setAttribute("aria-pressed", "false");
+    }
+  });
+  audioVolume.addEventListener("input", () => {
+    ambienceAudio.volume = Number(audioVolume.value);
+  });
+}
+
 const SUPABASE_URL = "https://xqrlasrtetugnlkelpip.supabase.co";
 const SUPABASE_KEY = "sb_publishable_kJGCMhukSS0V36uAseiPEw_EaWwHqLC";
 const reviewsList = document.querySelector("#reviews-list");
@@ -126,8 +156,8 @@ document.querySelectorAll('.rating-options input[name="rating"]').forEach((radio
       const labelRating = Number(label.querySelector("input").value.split(" ")[0]);
       label.classList.toggle("is-selected", labelRating >= selectedRating);
     });
-
-    document.querySelector(".reviews-refresh")?.addEventListener("click", loadReviews);
-    loadReviews();
   });
 });
+
+document.querySelector(".reviews-refresh")?.addEventListener("click", loadReviews);
+loadReviews();

@@ -15,6 +15,13 @@
       <p><span class="pulse-dot"></span> Sabor auténtico · De mi patio a tu mesa</p>
       <a href="tel:+17873905343">Ordena: <strong>787-412-0727 / 787-390-5343</strong></a>
     </div>
+    <div class="audio-player" aria-label="Música de ambiente">
+      <audio id="ambience-audio" loop preload="metadata">
+        <source src="assets/ambiente.mp3" type="audio/mpeg" />
+      </audio>
+      <button id="audio-toggle" type="button" aria-label="Reproducir música de ambiente" aria-pressed="false"><span class="audio-icon">▶</span><span class="audio-label">Música de ambiente</span></button>
+      <label class="volume-control" for="audio-volume"><span>Vol.</span><input id="audio-volume" type="range" min="0" max="1" step="0.05" value="0.45" aria-label="Volumen" /></label>
+    </div>
 
     <header class="site-header" id="inicio">
       <nav class="nav container" aria-label="Navegación principal">
