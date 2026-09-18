@@ -62,4 +62,9 @@
 .reviews-public{margin-top:76px}.public-heading{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:13px}.public-heading .eyebrow{margin:0}.reviews-refresh{background:none;border:0;padding:0;font-family:var(--sans);cursor:pointer}.reviews-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}.public-review{background:var(--paper);border:1px solid var(--line);padding:22px}.public-review-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.public-review strong{font:700 16px var(--serif)}.public-stars{color:var(--yellow);letter-spacing:2px;white-space:nowrap}.public-review p{font-size:13px;line-height:1.6;color:var(--muted);margin:17px 0 15px}.public-review time{font-size:10px;color:#a0968c;text-transform:uppercase;letter-spacing:.1em}.reviews-status{grid-column:1/-1;color:var(--muted);font-size:13px}
 @media(max-width:800px){.reviews-section{padding:76px 0}.reviews-grid{grid-template-columns:1fr;gap:45px}.review-form{padding:25px 20px}}
 @media(max-width:800px){.reviews-public{margin-top:55px}.public-heading{display:block}.public-heading .reviews-refresh{margin-top:12px}.reviews-list{grid-template-columns:1fr}}
-@media(max-width:500px){.audio-player{right:10px;bottom:10px;left:10px;justify-content:space-between}.audio-label{font-size:10px}.volume-control input{width:64px}}
+@media(max-width:500px){
+  .audio-player{right:18px;bottom:18px;left:auto;width:58px;height:58px;padding:0;border-radius:50%;justify-content:center;box-shadow:0 6px 20px #0008}
+  .audio-player button{width:100%;height:100%;justify-content:center}
+  .audio-icon{width:34px;height:34px;font-size:14px}
+  .audio-label,.volume-control{display:none}
+}
