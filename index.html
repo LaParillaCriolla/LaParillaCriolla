@@ -149,14 +149,46 @@
         <div class="container story-grid">
           <div class="story-number">08<small>años<br />de sabor</small></div>
           <div><p class="eyebrow">Nuestra historia</p><h2>Una mesa llena<br />siempre sabe <em>mejor.</em></h2></div>
-          <div class="story-copy"><p>Empezamos con una parrilla, una receta familiar y las ganas de hacerte sentir en casa. Hoy seguimos cocinando con el mismo fuego: el de compartir.</p><a class="text-link light" href="#reservas">Conócenos <span>↗</span></a></div>
+          <div class="story-copy"><p>Empezamos con una parrilla, una receta familiar y las ganas de hacerte sentir en casa. Hoy seguimos cocinando con el mismo fuego: el de compartir.</p><a class="text-link light" href="https://www.facebook.com/LaParillaCriolla" target="_blank" rel="noopener noreferrer">Conócenos en Facebook <span>↗</span></a></div>
         </div>
       </section>
 
       <section class="gallery-section" id="galeria">
         <div class="gallery-card gallery-card-large"><span>El fuego<br /><em>nos une.</em></span></div>
         <div class="gallery-card gallery-card-small"><span>Momentos<br /><em>criollos.</em></span></div>
-        <div class="gallery-aside"><p class="eyebrow dark">Síguenos</p><h2>@laparrillacriolla</h2><p>Comparte tu mesa con nosotros.</p></div>
+        <div class="gallery-aside"><p class="eyebrow dark">Síguenos</p><h2>@anthony_serrano_1209</h2><p>Comparte tu mesa con nosotros.</p><div class="social-links"><a href="https://www.facebook.com/LaParillaCriolla" target="_blank" rel="noopener noreferrer">Facebook <span>↗</span></a><a href="https://www.instagram.com/anthony_serrano_1209/" target="_blank" rel="noopener noreferrer">Instagram <span>↗</span></a></div></div>
+      </section>
+
+      <section class="reviews-section" id="reviews">
+        <div class="container reviews-grid">
+          <div class="reviews-intro">
+            <p class="eyebrow dark">Tu opinión cuenta</p>
+            <h2>¿Te gustó<br /><em>la experiencia?</em></h2>
+            <p>Ayúdanos a seguir creciendo. Déjanos una recomendación pública en Facebook o cuéntanos directamente cómo fue tu visita.</p>
+            <a class="button button-primary" href="https://www.facebook.com/LaParillaCriolla/reviews" target="_blank" rel="noopener noreferrer">Recomiéndanos en Facebook <span>↗</span></a>
+          </div>
+          <form class="review-form" id="review-form">
+            <p class="review-form-title">Déjanos tu review</p>
+            <label>Nombre<input name="reviewer" type="text" placeholder="Tu nombre" required /></label>
+            <fieldset>
+              <legend>¿Cómo fue tu experiencia?</legend>
+              <div class="rating-options">
+                <label><input type="radio" name="rating" value="5 estrellas" required /><span>★</span></label>
+                <label><input type="radio" name="rating" value="4 estrellas" /><span>★</span></label>
+                <label><input type="radio" name="rating" value="3 estrellas" /><span>★</span></label>
+                <label><input type="radio" name="rating" value="2 estrellas" /><span>★</span></label>
+                <label><input type="radio" name="rating" value="1 estrella" /><span>★</span></label>
+              </div>
+            </fieldset>
+            <label>Comentario<textarea name="comment" rows="4" placeholder="Cuéntanos sobre tu visita..." required></textarea></label>
+            <button class="button button-primary" type="submit">Enviar review <span>→</span></button>
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="container reviews-public">
+          <div class="public-heading"><p class="eyebrow dark">Lo que dicen nuestros clientes</p><button class="text-link reviews-refresh" type="button">Actualizar reviews ↻</button></div>
+          <div class="reviews-list" id="reviews-list" aria-live="polite"><p class="reviews-status">Cargando reviews...</p></div>
+        </div>
       </section>
 
       <section class="reservation-section" id="reservas">
